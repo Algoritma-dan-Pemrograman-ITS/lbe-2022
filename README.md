@@ -9,7 +9,7 @@
   - [Instalasi](#instalasi)
   - [Konfigurasi](#konfigurasi)
   - [Perintah Dasar](#perintah-dasar)
-  - [Meletakkan Repositori Lokal Pada Repositori Online](#meletakkan-repositori-lokal-pada-repositori-online)
+  - [Meletakkan Repositori Lokal Pada Repositori Onlinegot](#meletakkan-repositori-lokal-pada-repositori-online)
 
 - [Object-Oriented Programming Dengan Java](#object-oriented-programming-dengan-java)
 
