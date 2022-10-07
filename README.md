@@ -112,15 +112,21 @@ Sebelum menggunakan Git, perlu (tidak jika menggunakan Github Desktop) dilakukan
 
 1. Masukkan username dengan perintah berikut
 
-        git config --global user.name "your_username"
+    ``` txt
+    git config --global user.name "your_username"
+    ```
 
 2. Masukkan email dengan perintah berikut
 
-        git config --global user.email "your_email_address@example.com"
+    ```txt
+    git config --global user.email "your_email_address@example.com"
+    ```
 
 3. Cek hasil konfigurasi dengan perintah berikut
 
-        git config --global --list
+    ```txt
+    git config --global --list
+    ```
 
 ### Perintah Dasar
 
@@ -144,7 +150,9 @@ Perintah `git init` adalah perintah yang digunakan untuk meng-inisialisasi **dir
 
 `git remote` adalah perintah yang berkaitan dengan "remote" atau tautan dari repository tersebut. Jalankan command berikut untuk menambahkan "remote" pada suatu Git Repository lokal:
 
-    git remote add origin <https repositori>
+```txt
+git remote add origin <https repositori>
+```
 
 adapun untuk `<https repositori>` didapat dari
 
@@ -152,7 +160,9 @@ adapun untuk `<https repositori>` didapat dari
 
 Untuk melakukan pengecekan dari remote suatu repositori dapat menjalankan perintah berikut:
 
-    git remote -v
+```txt
+git remote -v
+```
 
 #### **git clone**
 
@@ -165,7 +175,9 @@ Untuk melakukan pengecekan dari remote suatu repositori dapat menjalankan perint
 
 3. Jalankan perintah berikut:
 
-        git clone <https repositori>
+    ```txt
+    git clone <https repositori>
+    ```
 
       ![image](https://user-images.githubusercontent.com/86661387/194246694-4efcef76-5219-414a-9b85-afc54619b1b2.png)
 
@@ -177,47 +189,65 @@ Branch adalah sebuah fitur pada git untuk membuat beberapa copy dari repositori 
 
 Buat branch baru dengan menjalankan perintah berikut:
 
-    git checkout -b <nama branch>
+```txt
+git checkout -b <nama branch>
+```
 
 Setiap branch yang telah dilakukan perubahan juga dapat digabungkan dengan branch lain untuk menyatukan perubahan dari masing-masing branch
 
-    git checkout <default-branch>
-    git merge <feature-branch>
+```txt
+git checkout <default-branch>
+git merge <feature-branch>
+```
 
 Berikut adalah contoh dari penggabungan dua branch:
 
-    git checkout main
-    git merge Alpro-ITS
+```txt
+git checkout main
+git merge Alpro-ITS
+```
 
 #### **git checkout/git switch**
 
 `git checkout` atau `git switch` adalah perintah untuk berpindah dari satu branch menuju branch lainnya. Berikut adalah contoh dari penggunaan perintah tersebut:
 
-    git checkout <nama branch>
+```txt
+git checkout <nama branch>
+```
 
 atau
 
-    git switch <nama branch>
+```txt
+git switch <nama branch>
+```
 
 Untuk mengecek branch yang sedang kita kunjungi, dapat menggunakan perintah berikut:
 
-    git branch -v
+```txt
+git branch -v
+```
 
 #### **git add**
 
 `git add` adalah perintah untuk menambahkan perubahan yang dilakukan untuk selanjutnya dilakukan proses "commit" ke dalam repositori. Secara umum perintah `git add` dapat dijalankan dengan format:
 
-    git add <nama direktori/file yang diubah> 
+```txt
+git add <nama direktori/file yang diubah> 
+```
 
 Perintah dibawah akan secara otomatis menambah semua perubahan (termasuk sub-direktori yang ada di dalamnya)
 
-    git add .
+```txt
+git add .
+```
 
 #### **git commit**
 
 `git commit` adalah perintah untuk selanjutnya menyimpan hasil perubahan pada repositori lokal. Secara umum perintah `git commit` memiliki format seperti berikut:
 
-    git commit -m "komentar"
+```txt
+git commit -m "komentar"
+```
 
 Untuk komentar dapat diisi dengan "initial commit" (jika ini adalah commit pertama pada repositori) atau perubahan yang ditambahkan.
 
@@ -225,17 +255,25 @@ Untuk komentar dapat diisi dengan "initial commit" (jika ini adalah commit perta
 
 `git push` adalah perintah untuk "mendorong" hasil penyimpanan repositori pada repositori online seperti Github. Berikut adalah format dan contoh perintahnya:
 
-    git push <remote> <branch>
+```txt
+git push <remote> <branch>
+```
 
-    git push origin main
+```txt
+git push origin main
+```
 
 #### **git pull**
 
 `git pull` adalah perintah untuk "menarik" atau mengunduh perubahan baru pada repositori online. Yang membedakan dengan `git clone` adalah jika `git clone` digunakan untuk mengunduh seluruh repositori, `git pull` biasa digunakan untuk menyamakan atau menyinkronkan repositori lokal dengan repositori online. Berikut adalah format dan contoh perintahnya:
 
-    git pull <remote> <branch>
+```txt
+git pull <remote> <branch>
+```
 
-    git pull origin main
+```txt
+git pull origin main
+```
 
 ### Meletakkan repositori lokal pada repositori online
 
@@ -243,13 +281,17 @@ Untuk komentar dapat diisi dengan "initial commit" (jika ini adalah commit perta
 2. Pastikan bahwa repository lokal sudah di-inisialisasi dan telah ditambahkan remotenya
 3. Jika pada repositori online terdapat file tambahan seperti `.gitignore` atau `README.md`, jalankan perintah berikut:
 
+    ```txt
     git pull --allow-unrelated-histories origin main
+    ```
 
 4. Tambahkan branch `main` pada repositori lokal
 5. Jalankan perintah berikut secara berurutan:
 
+    ```txt
     git add .
     git commit -m "initial commit"
     git push origin main
+    ```
 
 ## **Object-Oriented Programming Dengan Java**
