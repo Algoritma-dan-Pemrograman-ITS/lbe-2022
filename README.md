@@ -9,7 +9,7 @@
   - [Instalasi](#instalasi)
   - [Konfigurasi](#konfigurasi)
   - [Perintah Dasar](#perintah-dasar)
-  - [Meletakkan Repositori Lokal Pada Repositori Onlinegot](#meletakkan-repositori-lokal-pada-repositori-online)
+  - [Meletakkan Repositori Lokal Pada Repositori Online](#meletakkan-repositori-lokal-pada-repositori-online)
 
 - [Object-Oriented Programming Dengan Java](#object-oriented-programming-dengan-java)
 
@@ -90,7 +90,7 @@ Pengabdian Masyarakat di Tahun 2022:
 - Desain dan Analisis Algoritma Artificial Neural Network dalam Pengenalan Teks pada Studi Kasus SPOJ EYES - Robo Eye
 - Implementasi Model Gabungan Analisis Komponen Independen dan Jaringan Saraf Tiruan untuk Memperkirakan Variasi Nilai Tukar Mata Uang
 
-### Pemgrograman Web
+### Pemrograman Web
 
 - Rancang Bangun Sistem Pemakaian Masker Wajah pada Area Publik berbasis Pemrograman WebSocket
 - Implementasi Algoritma Bi-directional Long Short-Term Memory untuk Sistem Rekomendasi Jawaban Medis Otomatis Berbasis Web
