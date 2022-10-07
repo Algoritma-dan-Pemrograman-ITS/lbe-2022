@@ -59,7 +59,7 @@ Penelitian di Tahun 2022:
 
 Pengabdian Masyarakat di Tahun 2022:
 
-1. Abmas ITS Beri Pelatihan Pemrograman untuk Siswa SMA
+1. [Abmas ITS Beri Pelatihan Pemrograman untuk Siswa SMA](https://www.its.ac.id/news/2022/09/14/abmas-its-beri-pelatihan-pemrograman-untuk-siswa-sma/)
 
 ## Domain TA Alpro
 
