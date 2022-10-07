@@ -96,11 +96,15 @@ Pada LBE ini, kita akan coba belajar Git Bash dan GitHub Desktop.
 1. Buka terminal
 2. Jalankan command berikut
 
-        sudo apt install git
+``` txt
+sudo apt install git
+```
 
-    Untuk mengecek apakah sudah terinstall Git, dapat membuka terminal (apa saja) atau command prompt dan jalankan command berikut
+Untuk mengecek apakah sudah terinstall Git, dapat membuka terminal (apa saja) atau command prompt dan jalankan command berikut
 
-        git --version
+``` txt
+ git --version
+```
 
 ### Konfigurasi
 
