@@ -37,7 +37,7 @@
 ### Mata Kuliah Peminatan
 
 - Pengembangan Analisis Algoritma
-- Pemrograman Berbasis Antar muka
+- Pemrograman Berbasis Antar Muka
 - Pemrograman Perangkat Bergerak
 - Topik Khusus Algoritma dan Pemrograman
 
@@ -63,7 +63,7 @@ Pengabdian Masyarakat di Tahun 2022:
 
 ## Domain TA Alpro
 
-### Desain dan Analisis Algoritma
+### Perancangan dan Analisis Algoritma
 
 - Desain dan Analisis Algoritma Prime Factorization dan Primality Test pada Studi Kasus Beecrowd 2145 – The Love Life of the Numbers.
 - Proposal Studi Kasus E-Olymp 8484 Maximal Flows Dimension
