@@ -43,12 +43,23 @@
 
 ## Penelitian
 
-Penelitian di tahun 2021:
+Penelitian di Tahun 2021:
 
 1. Penelitian Dasar Unggulan Perguruan Tinggi : Sistem Rekomendasi Media Sosial untuk Mendukung Produktivitas berdasarkan Perilaku Penduduk Usia Produktif dengan Pendekatan Ego-Centric Network Analysis dalam Mengatasi Keterbatasan Ruang Gerak Akibat COVID19
 2. PENELITIAN KEILMUAN : Fitur Multi-Atensi Pada Arsitektur Deep Learning Untuk Translasi Teks Bahasa Indonesia-Arab
 3. PENELITIAN KERJASAMA ANTAR PERGURUAN TINGGI : ANALISIS PENGARUH AKUN KREDIBEL PADA TEKS TWITTER MULTI-KELAS UNTUK MENGETAHUI PUBLIC CONCERN DI MASA PANDEMI COVID-19
 4. PENELITIAN KOLABORASI PUSAT : Pengembangan Sistem Pelacakan Gejala COVID-19 dan Identifikasi Ketaatan Protokol Kesehatan pada Kapal Penumpang
+
+Penelitian di Tahun 2022:
+
+1. Reliability Evaluation of Microservices and Monolithic Architectures
+2. Prediksi Persediaan Pasokan Bahan Bakar PLTD di Daerah 3T Menggunakan CNN-LSTM untuk Mengantisipasi Pemadaman Listrik
+
+## Pengabdian Masyarakat
+
+Pengabdian Masyarakat di Tahun 2022:
+
+1. Abmas ITS Beri Pelatihan Pemrograman untuk Siswa SMA
 
 ## Domain TA Alpro
 
