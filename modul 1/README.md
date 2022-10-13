@@ -398,5 +398,3 @@ git pull origin main
     git commit -m "initial commit"
     git push origin main
     ```
-
-## **Object-Oriented Programming Dengan Java**
