@@ -107,7 +107,7 @@ Dalam Java, abstraksi ini dapat dilakukan dengan membuat *abstract class* dan *i
 
 #### 3. Inheritance
 
-Inheritance merupakan kemampuan suatu objek untuk memperoleh beberapa atau bahkan semua properti dari objek lain dalam pemrograman OOP. Hal ini bisa dimisalkan dari seorang anak mewarisi sifat-sifat orang tuanya.
+Inheritance merupakan kemampuan suatu objek untuk memperoleh beberapa atau bahkan semua properti dari objek lain dalam pemrograman OOP. Hal ini bisa dimisalkan dari seorang anak mewarisi sifat-sifat orang tuanya. 
 
 Inheritance ini menggunakan konsep *reusability*, dengan kata lain, apabila kita ingin membuat sebuah class baru dan sudah terdapat class yang mengandung potongan kode yang kita inginkan, maka kita dapat mengambilnya untuk class baru kita hanya dengan meng-*extend*-nya.
 
@@ -144,7 +144,7 @@ Singkatan dari SOLID sendiri adalah :
 - L - Liskov Substitution Principle: Fungsi yang mereferensi ke parent class harus dapat menggunakan objek dari kelas turunan tanpa menyimpang dari parent class-nya. Singkatnya, setiap kelas turunan harus bisa menjadi pengganti untuk base class atau kelas parent nya.
   
   [Dapat dicapai dengan konsep Polymorphism]
-
+  
 - I - Interface Segregation Principle: Objek client tidak boleh dipaksa untuk mengimplementasikan sebuah interface yang tidak ia gunakan.
   
   [Dapat dicapai dengan konsep Abstract Class dan Interface]
@@ -155,4 +155,24 @@ Singkatan dari SOLID sendiri adalah :
 
 DRY adalah sebuah singkatan dari Don't Repeat Yourself. Prinsip DRY ketika menulis kode diterapkan untuk mengurangi repetisi di penulisan kode dengan prinsip abstraksi. Efek dari ini akan membuat kode lebih mudah dibaca dan dapat mengurangi potensi untuk software bug. Secara garis besar, DRY adalah prinsip anti-perulangan yang tidak perlu. Beberapa contoh penerapan DRY adalah dengan menggunakan Function, Loop, Inheritance, dan lain sebagainya.
 
-## Latihan
+## Tugas:
+
+Buatlah sebuah git repository untuk setiap kelompok
+Masukkan setiap anggota kelompok menjadi contributor
+
+Hal yang harus dilakukan:
+1. Buatlah sebuah README.md tanpa isi
+2. Setiap anggota membuat sebuah markdown dengan format nama: NRP_NamaLengkap, berisikan kesan-pesan selama LBE dan harapan perkuliahan untuk ke depannya
+3. Tuliskan nama dan NRP dalam README.md sebelum melakukan push
+4. Buatlah branch untuk setiap anggota dengan format namaPanggilan
+5. Push hasil kerjaan setiap anggota ke masing-masing branch
+6. Merge setiap branch ke dalam main / master branch, **JANGAN HAPUS BRANCH YANG TELAH DIBUAT**
+
+contoh alur pengerjaan:
+<br>1 Kelompok berisikan Nopal dan Bgsd
+<br>Nopal membuat repository dan menambahkan Bgsd sebagai contributor
+<br>Nopal membuat markdown tugas
+<br>Nopal mengisikan nama dan NRP nya pada README
+<br>Nopal membuat branch "Nopal"
+<br>Nopal push hasil kerjaan ke branch "Nopal"
+<br>Nopal melakukan merge ke main branch tanpa menghapus branch "Nopal"
