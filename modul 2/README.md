@@ -31,6 +31,29 @@ Salah satu flow yang dapat dilakukan untuk pull request:
 
 ### Apa yang dapat dilakukan ketika mendapat pull request?
 
+### Mengatasi merge conflict
+
+Setiap orang yang menggunakan Version Control System pasti akan bertemu saat di mana secara tidak sengaja melakukan push di saat main branch-nya berubah. Sehingga, ketika branch tersebut di-pull request, branch tersebut tidak dapat langsung karena terdapat file yang conflicted dengan main branch. Hal ini dikarenakan Git meminta untuk menentukan file mana yang harus dipertahankan.
+
+![image](https://user-images.githubusercontent.com/87473932/196573574-9e96d6fe-a08d-4d3c-b7d9-a212bbc56771.png)
+![image](https://user-images.githubusercontent.com/87473932/196573697-b74ce647-b6b8-4b7c-aaec-3d37354ac436.png)
+
+Lalu bagaimana cara kita mengatasi merge conflict?
+
+Sebenarnya, banyak cara yang dapat kita lakukan untuk mengatasi merge conflict. Cara yang paling umum adalah dengan me-resolve conflict di GitHub Web Editor atau website GitHub. Untuk *step-by-step*nya dapat kalian baca dengan mengakses link: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github
+Namun, cara di atas tidak adapat digunakan apabila *resolve button* tidak dapat digunakan.
+
+Cara lain yang dapat digunakan apabila kalian menggunakan Visual Studio Code adalah sebagai berikut:
+1. Install GitLens
+![image](https://user-images.githubusercontent.com/87473932/196575317-e9a0f9d5-7377-4112-ab2c-b1c1de2fa2a5.png)
+2. Pull main, maka akan terlihat pada bagian mana saja yang terdapat conflict. Klik **Resolve in merge editor**.
+![image](https://user-images.githubusercontent.com/87473932/196576867-3045e677-8435-49c8-bb7c-bea38de3edfc.png)
+3. Pilih file mana yang akan dipertahankan
+![image](https://user-images.githubusercontent.com/87473932/196577181-cc753d5f-44d0-4952-bc37-18fae5504760.png)
+![image](https://user-images.githubusercontent.com/87473932/196577240-8d37310e-6389-4ebb-88fb-1dd943845d70.png)
+4. Lakukan hingga tidak terdapat conflict.
+5. Lakukan push kembali ke branch dan merge pull request
+
 ### Remote
 Pada modul sebelumnya, kita telah menggunakan ```remote``` untuk menambahkan ```origin``` dari repository yang kita buat. Namun, ```remote``` memiliki command lainnya:
 <ul>
