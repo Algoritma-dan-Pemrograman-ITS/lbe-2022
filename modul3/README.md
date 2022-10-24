@@ -20,3 +20,10 @@
 ## Abstraction
 
 ## Polymorphism
+- Polymorphism berasal dari bahasa Yunani yang berarti "banyak bentuk"
+- dalam OOP, Polymorphism ialah kemampuan sebuah object berubah bentuk menjadi bentuk lain
+- konsep ini berkaitan erat dengan Inheritance
+
+
+
+Referensi: Vidoe youtube "TUTORIAL JAVA OOP BAHASA INDONESIA" Channel Programmer Zaman Now https://youtu.be/f3ZhNnvtV-w
