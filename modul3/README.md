@@ -19,11 +19,17 @@
 
 ## Abstraction
 
+### Abstract class
+- kita dapat menjadikan sebuah class sebagai abstract class
+- abstract class ialah class yang tidak bisa dibuat sebagai object secara langsung, hanya bisa diturunkan
+- untuk membuat sebuah class menjadi abstract, kita dapat menggunakan keyword 'abstract' sebelum keyword 'class'
+
+
 ## Polymorphism
 - Polymorphism berasal dari bahasa Yunani yang berarti "banyak bentuk"
 - dalam OOP, Polymorphism ialah kemampuan sebuah object berubah bentuk menjadi bentuk lain
 - konsep ini berkaitan erat dengan Inheritance
-
+- misal kita mempunyai object x yang extend ke object y (berarti object x ialah child dan object y ialah parent). lalu kita mendeklarasikan instance object dari object y (yg parent), maka kita bisa nge create instance object x. (poin ini mgkn bisa direvisi lagi)
 
 
 Referensi: Vidoe youtube "TUTORIAL JAVA OOP BAHASA INDONESIA" Channel Programmer Zaman Now https://youtu.be/f3ZhNnvtV-w
