@@ -1,5 +1,3 @@
-
-
 # Inheritance
 - Inheritance atau pewarisan adalah kemampuan untuk menurunkan sebuah class ke class lain
 - dalam artian, kita bisa membuat class Parent dan class Child
@@ -38,14 +36,14 @@ package mammals;
 
 // Class Monke mempunyai akses modifier default
 class Monke {
-	void eat_banana()
+	void eatBanana()
 	{
 		System.out.println("Banana Yum Yum!");
 	}
 	
 }
 ```
-Di sini kita mencoba untuk mengakses fungsi eat_banana() milik class Monke melalui class Crocs yang berada di package lain.
+Di sini kita mencoba untuk mengakses fungsi eatBanana() milik class Monke melalui class Crocs yang berada di package lain.
 ```java
 package reptiles;
 import mammals.*;
@@ -55,7 +53,7 @@ class Crocs {
 	public static void main(String args[])
     {
         Monke obj = new Monke();
-        obj.eat_banana();
+        obj.eatBanana();
     }
 }
 ```
@@ -66,7 +64,7 @@ class Crocs {
 Terlihat bahwa tidak bisa.
 
 -----------------
-Sekarang kita coba lagi mengakses fungsi eat_banana() melalui kelas lain yang masih satu package dengan Monke, yakni kelas Apes.
+Sekarang kita coba lagi mengakses fungsi eatBanana() melalui class lain yang masih satu package dengan Monke, yakni class Apes.
 
 ```java
 package mammals;
@@ -76,7 +74,7 @@ class Apes {
 	public static void main(String args[])
     {
         Monke obj = new Monke();
-        obj.eat_banana();
+        obj.eatBanana();
     }
 }
 ```
@@ -95,24 +93,24 @@ class Apes {
 -----------------
 **Contoh:**
 
-Kali ini kita akan membuat class Monke menjadi public. Lalu, kita menambahkan method public bernama breathe_air(). 
+Kali ini kita akan membuat class Monke menjadi public. Lalu, kita menambahkan method public bernama breatheAir(). 
 
 ```java
 package mammals;
 
 public class Monke {
-	void eat_banana()
+	void eatBanana()
 	{
 		System.out.println("Banana Yum Yum!");
 	}
 	
-	public void breathe_air()
+	public void breatheAir()
 	{
 		System.out.println("Breathe Air!");
 	}
 }
 ```
-Mari kita coba akses dari kelas Crocs.
+Mari kita coba akses dari class Crocs.
 ```java
 package reptiles;
 import mammals.*;
@@ -121,7 +119,7 @@ class Crocs {
 	public static void main(String args[])
     {
         Monke obj = new Monke();
-        obj.breathe_air();
+        obj.breatheAir();
     }
 }
 ```
@@ -130,7 +128,7 @@ class Crocs {
 
 ![image](https://user-images.githubusercontent.com/70790033/197673115-729627be-6517-4ff0-be34-aa322bfd6d8c.png)
 
-Terlihat bahwa method breathe_air() dapat diakses oleh kelas Croc yang berada di package lain. 
+Terlihat bahwa method breatheAir() dapat diakses oleh class Croc yang berada di package lain. 
 
 --------------
 
@@ -143,7 +141,7 @@ class Apes {
 	public static void main(String args[])
     {
         Monke obj = new Monke();
-        obj.breathe_air();
+        obj.breatheAir();
     }
 }
 ```
@@ -158,7 +156,76 @@ class Apes {
 
 - Menggunakan keyword private.
 - **Hanya** bisa **diakses** di dalam **class tempat deklarasi** objek.
-- Tidak bisa diakses dari kelas lain atau package lain.
+- Tidak bisa diakses dari class lain atau package lain.
+-----------------
+**Contoh:**
+Kita menambahkan variable private bernama traumaticMemories dan method private bernama reliveTrauma() ke dalam class Monke.
+
+```java
+package mammals;
+
+public class Monke {
+	private String traumaticMemories = "Family hunted by hoomans...";
+	
+	private void reliveTrauma()
+	{
+        	System.out.println(this.traumaticMemories);
+	}
+	
+	void eatBanana()
+	{
+		System.out.println("Banana Yum Yum!");
+	}
+	
+	public void breatheAir()
+	{
+		System.out.println("Breathe Air!");
+	}
+}
+```
+
+Kemudian, kita mencoba mengakses method reliveTrauma() dari class Apes. 
+
+```java
+package mammals;
+
+class Apes {
+	public static void main(String args[])
+    {
+        Monke obj = new Monke();
+        obj.reliveTrauma();
+    }
+}
+```
+
+**Output:**
+
+![image](https://user-images.githubusercontent.com/70790033/197681403-18f9bb79-ffa5-47ca-83ec-232b0e1ca1b2.png)
+
+Terlihat bahwa Apes tidak bisa mengakses trauma milik Monke. Method dan class private tidak bisa diakses oleh class dalam package yang sama.
+
+-----------------
+
+Package yang sama saja tidak bisa, apalagi yang berbeda. 
+
+```java
+package reptiles;
+import mammals.*;
+
+class Crocs {
+    public static void main(String args[])
+    {
+        Monke obj = new Monke();
+        obj.reliveTrauma();
+    }
+}
+```
+
+**Output:**
+
+![image](https://user-images.githubusercontent.com/70790033/197682312-bbcbc19e-48c1-45d4-a100-1a29c14af1cc.png)
+
+-----------------
 
 ### Protected
 
