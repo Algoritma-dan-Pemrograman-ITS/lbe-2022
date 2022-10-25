@@ -1,15 +1,98 @@
 # Inheritance
+
+Bayangkan, kita ingin membuat 2 object *Monke* (monyet) dan *Apes* (kera). mereka 2 jenis yang mirip, tetapi monyet itu memiliki ekor, sedangkan kera tidak. keduanya bisa berjalan, makan pisang, dan memiliki rambut. kita ingin membuat implementasi kodenya, kita dapat membuat seperti ini: 
+
+```java
+// kode tanpa inheritance
+class Monke {
+	float weight;
+
+	public void say {
+		System.out.println("hu hu ha ha");
+	}
+
+	public static void {
+		Monke myMonke = new Monke();
+		myMonke.say();
+	}
+}
+
+// **********
+
+class Apes {
+	float weight;
+	float tail_length;
+
+	public void say {
+		System.out.println("hu hu ha ha");
+	}
+
+	public static void {
+		Apes myApes = new Apes();
+		myApes.say();
+	}
+}
+```
+
+bayangkan, apabila kita juga ingin membuat class Gorilla, Simpanse, dan lainnya? Maka dari itu, mari kita mengenal konsep **inheritance.**
+
 - Inheritance atau pewarisan adalah kemampuan untuk menurunkan sebuah class ke class lain
 - dalam artian, kita bisa membuat class Parent dan class Child
 - class Child hanya bisa punya 1 parent, tetapi class Parent bisa punya banyak class Child
 - saat sebuah class diturunkan, maka semua field dan method yang ada di class Parent secara otomatis akan dimiliki oleh class Child
-- Untuk melakukan pewarisan, di class Child kita harus menggunakan keyword "extends" lalu diikuti dengan class parent-nya
+- Untuk melakukan pewarisan, di class Child kita harus menggunakan keyword **extends** lalu diikuti dengan class parent-nya
 
-// contoh code
+berikut contoh kode menggunakan inheritance
+
+```java
+class Primate {
+	float weight;
+	public void say {
+		System.out.println("hu hu ha ha");
+	}
+}
+
+// *******
+
+class Monke extends Primate {
+	float tail_length;
+	public static void {
+		Monke myMonke = new Monke();
+		myMonke.say(); // memanggil method dari Primate (parent)
+	}
+}
+
+// ********
+
+class Apes extends Primate {
+	public static void {
+		Apes myApes = new Apes();
+		myMonke.say();	// memanggil method dari Primate (parent)
+	}
+}
+```
 
 ## Method Overriding
+
 - Method overriding adalah kemampuan mendeklarasikan ulang method di child class, yang sudah ada di parent class
 - saat kita melakukan proses overriding tersebut, secara otomatis ketika kita membuat object dari class child, method yang di class parent tidak bisa diakses lagi
+
+contoh : 
+
+```java
+class Apes extends Primate {
+	@Overriding
+	public void say {
+		System.out.println("hihi haha");
+	}
+
+	public static void {
+		Apes myApes = new Apes();
+		myApes.say();	// memanggil method dari Primate (parent)
+	}
+}
+```
+
 
 # Encapsulation
 
