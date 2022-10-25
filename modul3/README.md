@@ -116,7 +116,7 @@ package reptiles;
 import mammals.*;
 
 class Crocs {
-	public static void main(String args[])
+    public static void main(String args[])
     {
         Monke obj = new Monke();
         obj.breatheAir();
@@ -138,7 +138,7 @@ Package lain saja bisa, apalagi dari package yang sama
 package mammals;
 
 class Apes {
-	public static void main(String args[])
+    public static void main(String args[])
     {
         Monke obj = new Monke();
         obj.breatheAir();
@@ -165,12 +165,17 @@ Kita menambahkan variable private bernama traumaticMemories dan method private b
 package mammals;
 
 public class Monke {
-	private String traumaticMemories = "Family hunted by hoomans...";
 	
-	private void reliveTrauma()
-	{
-        	System.out.println(this.traumaticMemories);
+	public String traumaticMemories;
+	
+	public Monke() {
+		traumaticMemories = "Hunted by hoomans...";
 	}
+
+	private void reliveTrauma()
+  	{
+        	System.out.println(this.traumaticMemories);
+ 	}
 	
 	void eatBanana()
 	{
@@ -181,6 +186,7 @@ public class Monke {
 	{
 		System.out.println("Breathe Air!");
 	}
+	
 }
 ```
 
@@ -190,7 +196,7 @@ Kemudian, kita mencoba mengakses method reliveTrauma() dari class Apes.
 package mammals;
 
 class Apes {
-	public static void main(String args[])
+    public static void main(String args[])
     {
         Monke obj = new Monke();
         obj.reliveTrauma();
