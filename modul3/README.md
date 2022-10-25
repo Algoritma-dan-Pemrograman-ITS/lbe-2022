@@ -23,18 +23,136 @@ Enkapsulasi biasanya diimplementasikan dengan menggunakan access modifiers.
 
 ## Access Modifiers
 
+<img src="https://user-images.githubusercontent.com/70790033/197654334-9753bee6-fee8-449f-9252-fe5c0fe71293.png" width="600">
+
 Sesuai namanya, access modifiers **memodifikasi jangkauan akses** dari suatu objek. Ada **4 tipe** access modifiers yang tersedia dalam Java:
 
 ### **Default**
 
 - Tidak memerlukan keyword.
 - Objek dengan access modifier default hanya dapat **diakses** dari **package** yang **sama**.
+-----------------
+**Contoh:**
+```java
+package mammals;
+
+// Class Monke mempunyai akses modifier default
+class Monke {
+	void eat_banana()
+	{
+		System.out.println("Banana Yum Yum!");
+	}
+	
+}
+```
+Di sini kita mencoba untuk mengakses fungsi eat_banana() milik class Monke melalui class Crocs yang berada di package lain.
+```java
+package reptiles;
+import mammals.*;
+
+// Class Crocs juga mempunyai akses modifier default
+class Crocs {
+	public static void main(String args[])
+    {
+        Monke obj = new Monke();
+        obj.eat_banana();
+    }
+}
+```
+
+**Output**
+
+![image](https://user-images.githubusercontent.com/70790033/197672512-b3ab5cd6-9daa-48e6-91cf-a47d33259d4c.png)
+Terlihat bahwa tidak bisa.
+
+-----------------
+Sekarang kita coba lagi mengakses fungsi eat_banana() melalui kelas lain yang masih satu package dengan Monke, yakni kelas Apes.
+
+```java
+package mammals;
+
+// Class Apes juga mempunyai akses modifier default
+class Apes {
+	public static void main(String args[])
+    {
+        Monke obj = new Monke();
+        obj.eat_banana();
+    }
+}
+```
+
+**Output**
+
+![image](https://user-images.githubusercontent.com/70790033/197671281-2714c343-894e-49b8-bf3e-d6c6de3185a7.png)
+
+-----------------
 
 ### Public
 
 - Menggunakan keyword public.
 - Jangkauan akses paling luas, bisa **diakses** oleh **siapa saja** dan dimana saja dalam program.
 - Kita bisa melakukan **read** dan **write** terhadap variabel public **dari luar**. Read berarti kita membaca nilai variabel, sedangkan write berarti kita menulis suatu nilai ke dalam variabel tersebut.
+-----------------
+**Contoh:**
+
+Kali ini kita akan membuat class Monke menjadi public. Lalu, kita menambahkan method public bernama breathe_air(). 
+
+```java
+package mammals;
+
+public class Monke {
+	void eat_banana()
+	{
+		System.out.println("Banana Yum Yum!");
+	}
+	
+	public void breathe_air()
+	{
+		System.out.println("Breathe Air!");
+	}
+}
+```
+Mari kita coba akses dari kelas Crocs.
+```java
+package reptiles;
+import mammals.*;
+
+class Crocs {
+	public static void main(String args[])
+    {
+        Monke obj = new Monke();
+        obj.breathe_air();
+    }
+}
+```
+
+**Output**
+
+![image](https://user-images.githubusercontent.com/70790033/197673115-729627be-6517-4ff0-be34-aa322bfd6d8c.png)
+
+Terlihat bahwa method breathe_air() dapat diakses oleh kelas Croc yang berada di package lain. 
+
+--------------
+
+Package lain saja bisa, apalagi dari package yang sama
+
+```java
+package mammals;
+
+class Apes {
+	public static void main(String args[])
+    {
+        Monke obj = new Monke();
+        obj.breathe_air();
+    }
+}
+```
+
+**Output**
+
+![image](https://user-images.githubusercontent.com/70790033/197674436-31f9656c-4016-4f50-86df-32f274ab3d5f.png)
+
+--------------
 
 ### Private
 
