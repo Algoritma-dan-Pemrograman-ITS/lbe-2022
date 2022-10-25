@@ -330,19 +330,157 @@ Untuk syntax penamaan, biasanya dimulai dengan kata get atau set lalu diikuti na
 
 Dengan method getter dan setter kita bisa membuat attribute class jadi **read-only** atau **write-only**. Dia akan read-only jika kita hanya membuat getter method, dan dia akan write-only jika kita hanya membuat setter method. 
 
-# Abstraction
-
-## Abstract class
-- kita dapat menjadikan sebuah class sebagai abstract class
-- abstract class ialah class yang tidak bisa dibuat sebagai object secara langsung, hanya bisa diturunkan
-- untuk membuat sebuah class menjadi abstract, kita dapat menggunakan keyword 'abstract' sebelum keyword 'class'
-
 
 # Polymorphism
 - Polymorphism berasal dari bahasa Yunani yang berarti "banyak bentuk"
 - dalam OOP, Polymorphism ialah kemampuan sebuah object berubah bentuk menjadi bentuk lain
 - konsep ini berkaitan erat dengan Inheritance
-- misal kita mempunyai object x yang extend ke object y (berarti object x ialah child dan object y ialah parent). lalu kita mendeklarasikan instance object dari object y (yg parent), maka kita bisa nge create instance object x. (poin ini mgkn bisa direvisi lagi)
+- misal kita mempunyai object x yang extend ke object y (berarti object x ialah child dan object y ialah parent). lalu kita mendeklarasikan instance object dari object y (yg parent), maka kita bisa nge create instance object x, dan menambahkan method yang berbeda tiap class childnya.
+
+contoh penerapan Polymorphism:
+
+kita mempunyai parent class sebagai berikut:
+```java
+	class Primate {
+	void say (){
+		System.out.println("Primataaaaa...");
+	}
+}
+```
+didalam parent classnya kita bisa lihat bahwa ada method `say()` dengan mengoutputkan "Primataaaa..."
+
+lalu kita juga mempunyai child class dengan menggunakan inherit ke parent classnya sebagai berikut:
+
+```java
+class Monke extends Primate {
+	void say () {
+		System.out.println("UU AAA UU AA");
+	}
+}
+
+class Apes extends Primate{
+	void say() {
+		System.out.println("HAHA HIHI HAHA HIHI");
+	}
+}
+```
+kita bisa lihat bahwa method yang akan di outputkan dari kedua child class dan mother class itu berbeda. Lalu kita akan mengeksekusi output method dari tiap kelas tersebut di dalam fungsi main sebagai berikut:
+
+```java
+public class main {
+	public static void main(String args[]){
+		Primate blublu;
+		blublu = new Primate();
+		blublu.say();
+
+		blublu = new Monke();
+		blublu.say();
+
+		blublu = new Apes();
+		blublu.say();
+	}
+}
+```
+
+Di dalam fungsi main kita sudah memanggil `blublu` sebagai mother class, dan juga sebagai child class. lalu kita panggil method `say()` dari tiap-tiap class dan hasil outputnya akan menjadi:
+
+```
+Primataaaaa... 			//mother class
+UU AAA UU AA 			//child class (Monke)
+HAHA HIHI HAHA HIHI 	//child class (Apes)
+```
+
+
+# Abstraction
+
+## Abstract class dan Abstract method
+- kita dapat menjadikan sebuah class sebagai abstract class
+- `Abstract class` adalah class terbatas yang tidak dapat digunakan untuk membuat objek (untuk mengaksesnya, harus inherit dari kelas lain).
+- `Method Class` hanya dapat digunakan dalam kelas abstrak, dan tidak memiliki body. body disediakan oleh subclass (inherit).
+- untuk membuat sebuah class menjadi abstract, kita dapat menggunakan keyword 'abstract' sebelum keyword 'class'
+
+Contoh penerapan Abstract class:
+
+setelah kita sudah mengetahui polymorphism untuk menjalankan suatu absract class kita perlu menerapkan plymorphism juga untuk lebih mudah memahami aa itu abstract class.
+
+Kita mempunyai parent class sebagai berikut:
+```java
+abstract class Primate { // abstract class
+	abstract void eat(); // abstract method
+	void say (){
+		System.out.println("Primataaaaa...");
+	}
+}
+```
+berbeda bukan? inilah cara menerapkan `abstract class` kedalam class. kita bisa lihat ada method eat dengan abstract class seperti contoh di atas. Lalu kita mempunyai child class sebagai berikut:
+
+```java
+class Monke extends Primate {
+	void say () {
+		System.out.println("UU AAA UU AA");
+	}
+	void eat() {
+		System.out.println("Banana is yummy");
+	}
+}
+
+class Apes extends Primate{
+	void say() {
+		System.out.println("HAHA HIHI HAHA HIHI");
+	}
+	void eat() {
+		System.out.println("Apple is Yummy");
+	}
+}
+```
+
+Dengan menambahkan method eat yang berasal dari class abstract parent class.
+
+jika kita menggunakan fungsi main seperti polymorphism (Mendefinisikan parent child) maka akan memunculkan output `error`.
+
+```java
+public class main {
+	public static void main(String args[]){
+		Primate blublu;
+		blublu = new Primate() 	//error
+		blublu = new Monke();
+		blublu.say();
+		blublu.eat();
+
+		blublu = new Apes();
+		blublu.say();
+		blublu.eat();
+	}
+}
+```
+
+```
+java: Primate.Primate is abstract; cannot be instantiated
+```
+
+maka kita hanya bisa mendeklare seperti berikut:
+```java
+public class main {
+	public static void main(String args[]){
+		Primate blublu;
+
+		blublu = new Monke();
+		blublu.say();
+		blublu.eat();
+
+		blublu = new Apes();
+		blublu.say();
+		blublu.eat();
+	}
+}
+```
+Dengan output:
+```
+UU AAA UU AA
+Banana is yummy
+HAHA HIHI HAHA HIHI
+Apple is Yummy
+```
 
 
 # Referensi: 
