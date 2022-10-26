@@ -1,9 +1,9 @@
 # Inheritance
 
-Bayangkan, kita ingin membuat 2 object *Monke* (monyet) dan *Apes* (kera). mereka 2 jenis yang mirip, tetapi monyet itu memiliki ekor, sedangkan kera tidak. keduanya bisa berjalan, makan pisang, dan memiliki rambut. kita ingin membuat implementasi kodenya, kita dapat membuat seperti ini: 
+Bayangkan, kita ingin membuat 2 object *Monke* (monyet) dan *Apes* (kera). Mereka 2 jenis yang mirip, tetapi monyet itu memiliki ekor, sedangkan kera tidak. Keduanya bisa berjalan, makan pisang, dan memiliki rambut. Kita ingin membuat implementasi kodenya, kita dapat membuat seperti ini: 
 
 ```java
-// kode tanpa inheritance
+// Kode tanpa inheritance
 class Monke {
 	float weight;
 
@@ -34,15 +34,15 @@ class Apes {
 }
 ```
 
-bayangkan, apabila kita juga ingin membuat class Gorilla, Simpanse, dan lainnya? Maka dari itu, mari kita mengenal konsep **inheritance.**
+Bayangkan, apabila kita juga ingin membuat class Gorilla, Simpanse, dan lainnya? Maka dari itu, mari kita mengenal konsep **inheritance.**
 
 - Inheritance atau pewarisan adalah kemampuan untuk menurunkan sebuah class ke class lain
-- dalam artian, kita bisa membuat class Parent dan class Child
-- class Child hanya bisa punya 1 parent, tetapi class Parent bisa punya banyak class Child
-- saat sebuah class diturunkan, maka semua field dan method yang ada di class Parent secara otomatis akan dimiliki oleh class Child
+- Dalam artian, kita bisa membuat class Parent dan class Child
+- Class Child hanya bisa punya 1 parent, tetapi class Parent bisa punya banyak class Child
+- Saat sebuah class diturunkan, maka semua field dan method yang ada di class Parent secara otomatis akan dimiliki oleh class Child
 - Untuk melakukan pewarisan, di class Child kita harus menggunakan keyword **extends** lalu diikuti dengan class parent-nya
 
-berikut contoh kode menggunakan inheritance
+Berikut contoh kode menggunakan inheritance
 
 ```java
 class Primate {
@@ -75,9 +75,9 @@ class Apes extends Primate {
 ## Method Overriding
 
 - Method overriding adalah kemampuan mendeklarasikan ulang method di child class, yang sudah ada di parent class
-- saat kita melakukan proses overriding tersebut, secara otomatis ketika kita membuat object dari class child, method yang di class parent tidak bisa diakses lagi
+- Saat kita melakukan proses overriding tersebut, secara otomatis ketika kita membuat object dari class child, method yang di class parent tidak bisa diakses lagi
 
-contoh : 
+Contoh : 
 
 ```java
 class Apes extends Primate {
@@ -96,7 +96,7 @@ class Apes extends Primate {
 
 # Encapsulation
 
-Pada dasarnya, enkapsulasi adalah **membuat batasan akses** untuk suatu **objek**, seperti class, variable, dan method.
+Pada dasarnya, enkapsulasi adalah **membuat batasan akses** untuk suatu **objek**, seperti class, variable, attribute, dan method.
 
 Analoginya, kita pun sebagai manusia seringkali membuat batasan akses terhadap informasi. Ada hal yang kita sampaikan secara terbuka terhadap publik. Ada yang kita jaga dan sampaikan ke keluarga terdekat saja. Ada juga hal-hal privasi yang kita simpan untuk diri sendiri. 
 
@@ -143,7 +143,13 @@ class Crocs {
 
 **Output**
 
-![image](https://user-images.githubusercontent.com/70790033/197672512-b3ab5cd6-9daa-48e6-91cf-a47d33259d4c.png)
+```
+Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+	The method eatBanana() from the type Monke is not visible
+
+	at lbe_encapsulation/reptiles.Crocs.main(Crocs.java:9)
+```
+
 Terlihat bahwa tidak bisa.
 
 -----------------
@@ -164,7 +170,9 @@ class Apes {
 
 **Output**
 
-![image](https://user-images.githubusercontent.com/70790033/197671281-2714c343-894e-49b8-bf3e-d6c6de3185a7.png)
+```java
+Banana Yum Yum!
+```
 
 -----------------
 
@@ -209,7 +217,9 @@ class Crocs {
 
 **Output**
 
-![image](https://user-images.githubusercontent.com/70790033/197673115-729627be-6517-4ff0-be34-aa322bfd6d8c.png)
+```java
+Breathe Air!
+```
 
 Terlihat bahwa method breatheAir() dapat diakses oleh class Croc yang berada di package lain. 
 
@@ -231,7 +241,9 @@ class Apes {
 
 **Output**
 
-![image](https://user-images.githubusercontent.com/70790033/197674436-31f9656c-4016-4f50-86df-32f274ab3d5f.png)
+```java
+Breathe Air!
+```
 
 --------------
 
@@ -242,7 +254,7 @@ class Apes {
 - Tidak bisa diakses dari class lain atau package lain.
 -----------------
 **Contoh:**
-Kita menambahkan variable private bernama traumaticMemories dan method private bernama reliveTrauma() ke dalam class Monke.
+Kita menambahkan attribute private bernama traumaticMemories dan method private bernama reliveTrauma() ke dalam class Monke.
 
 ```java
 package mammals;
@@ -289,7 +301,12 @@ class Apes {
 
 **Output:**
 
-![image](https://user-images.githubusercontent.com/70790033/197681403-18f9bb79-ffa5-47ca-83ec-232b0e1ca1b2.png)
+```java
+Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+	The method reliveTrauma() from the type Monke is not visible
+
+	at lbe_encapsulation/mammals.Apes.main(Apes.java:7)
+```
 
 Terlihat bahwa Apes tidak bisa mengakses trauma milik Monke. Method dan class private tidak bisa diakses oleh class dalam package yang sama.
 
@@ -312,7 +329,12 @@ class Crocs {
 
 **Output:**
 
-![image](https://user-images.githubusercontent.com/70790033/197682312-bbcbc19e-48c1-45d4-a100-1a29c14af1cc.png)
+```
+Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+	The method reliveTrauma() from the type Monke is not visible
+
+	at lbe_encapsulation/reptiles.Crocs.main(Crocs.java:8)
+```
 
 -----------------
 
@@ -321,25 +343,215 @@ class Crocs {
 - Menggunakan keyword protected.
 - Dapat **diakses** dari **package** yang **sama**.
 - Bisa **diakses** dari **package lain** menggunakan **subclass** atau **child class**. (Inheritance)
+-----------------
+**Contoh:**
+Kita menambahkan attribute dan method protected bernama bananaStash dan checkBananaStash
+
+```java
+package mammals;
+
+public class Monke {
+	
+	public String traumaticMemories;
+	protected int bananaStash;
+	
+	public Monke() {
+		traumaticMemories = "Hunted by hoomans...";
+		bananaStash = 100;
+	}
+	
+	protected void checkBananaStash()
+	{
+		System.out.printf("Monke has %d banana", this.bananaStash);
+	}
+
+	private void reliveTrauma()
+    {
+        System.out.println(this.traumaticMemories);
+    }
+	
+	void eatBanana()
+	{
+		System.out.println("Banana Yum Yum!");
+		this.bananaStash--;
+	}
+	
+	public void breatheAir()
+	{
+		System.out.println("Breathe Air!");
+	}
+	
+}
+```
+Kemudian, kita mencoba mengakses method checkBananaStash() dari class Apes. 
+
+```java
+package mammals;
+
+class Apes {
+	public static void main(String args[])
+    {
+        Monke obj = new Monke();
+        obj.checkBananaStash();
+    }
+}
+```
+
+**Output:**
+```
+Monke has 100 banana
+```
+Terlihat bahwa kita dapat mengakses method checkBananaStash() dari class di yang package sama. 
+
+-----------------
+Ditambahkan class baru bernama Baboon yang terletak di package mammals2. Baboon merupakan subclass dari class Monke. Kita coba lagi mengakses method checkBananaStash() dari class tersebut. 
+
+```java
+package mammals2;
+import mammals.*;
+
+public class Baboon extends Monke {
+	public static void main(String args[])
+    {
+        Baboon obj = new Baboon();
+        obj.checkBananaStash();
+    }
+
+}
+```
+
+**Output:**
+```
+Monke has 100 banana
+```
+Terlihat bahwa kita dapat mengakses method checkBananaStash() dari class yang berada di package lain. Dengan syarat class tersebut merupakan subclass. 
+
+-----------------
+Misal kita coba mengakses method checkBananaStash() dari class Crocs.
+
+```java
+package reptiles;
+import mammals.*;
+
+class Crocs {
+	public static void main(String args[])
+    {
+        Monke obj = new Monke();
+        obj.checkBananaStash();
+    }
+}
+```
+
+**Output:**
+```java
+Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+	The method checkBananaStash() from the type Monke is not visible
+
+	at lbe_encapsulation/reptiles.Crocs.main(Crocs.java:8)
+```
+
+Terlihat bahwa method protected tidak dapat diakses oleh class dari package lain yang bukan merupakan subclass.
+
+-----------------
 
 ## Method Getter dan Setter
 
-Bagaimana jika kita perlu mengakses private variable dari luar? Kita bisa menggunakan method getter dan setter. Method **gette**r digunakan untuk **mengakses nilai** suatu variable, sedangkan method **setter** digunakan untuk **memasukkan nilai** ke dalam suatu variable. 
+Bagaimana jika kita perlu mengakses private attribute dari luar? Kita bisa menggunakan method getter dan setter. Method **getter** digunakan untuk **mengakses nilai** suatu attribute, sedangkan method **setter** digunakan untuk **memasukkan nilai** ke dalam suatu attribute. 
 
-Untuk syntax penamaan, biasanya dimulai dengan kata get atau set lalu diikuti nama variable dengan huruf pertama kapital. Misalnya getMoney dan setMoney.
+Untuk syntax penamaan, biasanya dimulai dengan kata get atau set lalu diikuti nama attribute dengan huruf pertama kapital. Misalnya getMoney dan setMoney.
 
 Dengan method getter dan setter kita bisa membuat attribute class jadi **read-only** atau **write-only**. Dia akan read-only jika kita hanya membuat getter method, dan dia akan write-only jika kita hanya membuat setter method. 
 
+-----------------
+**Contoh**
+
+Di sini kita sudah menambahkan fungsi getter dan setter untuk attribute traumaticMemories dan bananaStash.
+
+```java
+package mammals;
+
+public class Monke {
+
+	public String traumaticMemories;
+	protected int bananaStash;
+	
+	public String getTraumaticMemories() {
+		return traumaticMemories;
+	}
+
+	public void setTraumaticMemories(String traumaticMemories) {
+		this.traumaticMemories = traumaticMemories;
+	}
+
+	public int getBananaStash() {
+		return bananaStash;
+	}
+
+	public void setBananaStash(int bananaStash) {
+		this.bananaStash = bananaStash;
+	}
+
+	public Monke() {
+		traumaticMemories = "Hunted by hoomans...";
+		bananaStash = 100;
+	}
+	
+}
+```
+Kemudian kita coba mengakses method getTraumaticMemories() dari class Crocs. 
+
+```java
+package reptiles;
+import mammals.*;
+
+class Crocs {
+	public static void main(String args[])
+    {
+        Monke obj = new Monke();
+        System.out.printf(obj.getTraumaticMemories());
+    }
+}
+```
+
+**Output:**
+```java
+Hunted by hoomans...
+```
+Terlihat bahwa sekarang Crocs dapat mengakses isi attribute traumaticMemories melalui method getTraumaticMemories().
+
+---------------
+Bahkan, Crocs bisa juga mengganti isi attribute traumaticMemories melalui method setTraumaticMemories.
+
+```java
+package reptiles;
+import mammals.*;
+
+class Crocs {
+	public static void main(String args[])
+    {
+        Monke obj = new Monke();
+        obj.setTraumaticMemories("Family eaten by crocodiles...");
+        System.out.printf(obj.getTraumaticMemories());
+    }
+}
+```
+
+**Output:**
+```java
+Family eaten by crocodiles...
+```
+
+---------------
 
 # Polymorphism
 - Polymorphism berasal dari bahasa Yunani yang berarti "banyak bentuk"
-- dalam OOP, Polymorphism ialah kemampuan sebuah object berubah bentuk menjadi bentuk lain
-- konsep ini berkaitan erat dengan Inheritance
-- misal kita mempunyai object x yang extend ke object y (berarti object x ialah child dan object y ialah parent). lalu kita mendeklarasikan instance object dari object y (yg parent), maka kita bisa nge create instance object x, dan menambahkan method yang berbeda tiap class childnya.
+- Dalam OOP, Polymorphism ialah kemampuan sebuah object berubah bentuk menjadi bentuk lain
+- Konsep ini berkaitan erat dengan Inheritance
+- Misal kita mempunyai object x yang extend ke object y (berarti object x ialah child dan object y ialah parent). Lalu kita mendeklarasikan instance object dari object y (yg parent), maka kita bisa nge create instance object x, dan menambahkan method yang berbeda tiap class childnya.
 
-contoh penerapan Polymorphism:
+Contoh penerapan Polymorphism:
 
-kita mempunyai parent class sebagai berikut:
+Kita mempunyai parent class sebagai berikut:
 ```java
 	class Primate {
 	void say (){
@@ -347,9 +559,9 @@ kita mempunyai parent class sebagai berikut:
 	}
 }
 ```
-didalam parent classnya kita bisa lihat bahwa ada method `say()` dengan mengoutputkan "Primataaaa..."
+Didalam parent classnya kita bisa lihat bahwa ada method `say()` dengan mengoutputkan "Primataaaa..."
 
-lalu kita juga mempunyai child class dengan menggunakan inherit ke parent classnya sebagai berikut:
+Lalu kita juga mempunyai child class dengan menggunakan inherit ke parent classnya sebagai berikut:
 
 ```java
 class Monke extends Primate {
@@ -364,7 +576,7 @@ class Apes extends Primate{
 	}
 }
 ```
-kita bisa lihat bahwa method yang akan di outputkan dari kedua child class dan mother class itu berbeda. Lalu kita akan mengeksekusi output method dari tiap kelas tersebut di dalam fungsi main sebagai berikut:
+Kita bisa lihat bahwa method yang akan di outputkan dari kedua child class dan mother class itu berbeda. Lalu kita akan mengeksekusi output method dari tiap kelas tersebut di dalam fungsi main sebagai berikut:
 
 ```java
 public class main {
@@ -382,7 +594,7 @@ public class main {
 }
 ```
 
-Di dalam fungsi main kita sudah memanggil `blublu` sebagai mother class, dan juga sebagai child class. lalu kita panggil method `say()` dari tiap-tiap class dan hasil outputnya akan menjadi:
+Di dalam fungsi main kita sudah memanggil `blublu` sebagai mother class, dan juga sebagai child class. Lalu kita panggil method `say()` dari tiap-tiap class dan hasil outputnya akan menjadi:
 
 ```
 Primataaaaa... 			//mother class
@@ -390,18 +602,17 @@ UU AAA UU AA 			//child class (Monke)
 HAHA HIHI HAHA HIHI 	//child class (Apes)
 ```
 
-
 # Abstraction
 
 ## Abstract class dan Abstract method
-- kita dapat menjadikan sebuah class sebagai abstract class
+- Kita dapat menjadikan sebuah class sebagai abstract class
 - `Abstract class` adalah class terbatas yang tidak dapat digunakan untuk membuat objek (untuk mengaksesnya, harus inherit dari kelas lain).
 - `Method Class` hanya dapat digunakan dalam kelas abstrak, dan tidak memiliki body. body disediakan oleh subclass (inherit).
-- untuk membuat sebuah class menjadi abstract, kita dapat menggunakan keyword 'abstract' sebelum keyword 'class'
+- Untuk membuat sebuah class menjadi abstract, kita dapat menggunakan keyword 'abstract' sebelum keyword 'class'
 
 Contoh penerapan Abstract class:
 
-setelah kita sudah mengetahui polymorphism untuk menjalankan suatu absract class kita perlu menerapkan plymorphism juga untuk lebih mudah memahami aa itu abstract class.
+Setelah kita sudah mengetahui polymorphism, untuk menjalankan suatu absract class kita perlu menerapkan polymorphism juga untuk lebih mudah memahami aa itu abstract class.
 
 Kita mempunyai parent class sebagai berikut:
 ```java
@@ -412,7 +623,7 @@ abstract class Primate { // abstract class
 	}
 }
 ```
-berbeda bukan? inilah cara menerapkan `abstract class` kedalam class. kita bisa lihat ada method eat dengan abstract class seperti contoh di atas. Lalu kita mempunyai child class sebagai berikut:
+Berbeda bukan? inilah cara menerapkan `abstract class` kedalam class. Kita bisa lihat ada method eat dengan abstract class seperti contoh di atas. Lalu kita mempunyai child class sebagai berikut:
 
 ```java
 class Monke extends Primate {
@@ -436,7 +647,7 @@ class Apes extends Primate{
 
 Dengan menambahkan method eat yang berasal dari class abstract parent class.
 
-jika kita menggunakan fungsi main seperti polymorphism (Mendefinisikan parent child) maka akan memunculkan output `error`.
+Jika kita menggunakan fungsi main seperti polymorphism (Mendefinisikan parent child) maka akan memunculkan output `error`.
 
 ```java
 public class main {
@@ -458,7 +669,7 @@ public class main {
 java: Primate.Primate is abstract; cannot be instantiated
 ```
 
-maka kita hanya bisa mendeklare seperti berikut:
+Maka kita hanya bisa men-declare seperti berikut:
 ```java
 public class main {
 	public static void main(String args[]){
