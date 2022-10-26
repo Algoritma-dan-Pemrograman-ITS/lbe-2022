@@ -25,11 +25,11 @@ Bayangkan, kita ingin membuat 2 object *Monke* (monyet) dan *Apes* (kera). Merek
 class Monke {
 	float weight;
 
-	public void say {
+	public void say(){
 		System.out.println("hu hu ha ha");
 	}
 
-	public static void {
+	public static void() {
 		Monke myMonke = new Monke();
 		myMonke.say();
 	}
@@ -41,11 +41,11 @@ class Apes {
 	float weight;
 	float tail_length;
 
-	public void say {
+	public void say() {
 		System.out.println("hu hu ha ha");
 	}
 
-	public static void {
+	public static void() {
 		Apes myApes = new Apes();
 		myApes.say();
 	}
@@ -65,7 +65,7 @@ Berikut contoh kode menggunakan inheritance
 ```java
 class Primate {
 	float weight;
-	public void say {
+	public void say() {
 		System.out.println("hu hu ha ha");
 	}
 }
@@ -74,7 +74,7 @@ class Primate {
 
 class Monke extends Primate {
 	float tail_length;
-	public static void {
+	public static void() {
 		Monke myMonke = new Monke();
 		myMonke.say(); // memanggil method dari Primate (parent)
 	}
@@ -83,7 +83,7 @@ class Monke extends Primate {
 // ********
 
 class Apes extends Primate {
-	public static void {
+	public static void() {
 		Apes myApes = new Apes();
 		myMonke.say();	// memanggil method dari Primate (parent)
 	}
@@ -100,11 +100,11 @@ Contoh :
 ```java
 class Apes extends Primate {
 	@Overriding
-	public void say {
+	public void say() {
 		System.out.println("hihi haha");
 	}
 
-	public static void {
+	public static void() {
 		Apes myApes = new Apes();
 		myApes.say();	// memanggil method dari Primate (parent)
 	}
