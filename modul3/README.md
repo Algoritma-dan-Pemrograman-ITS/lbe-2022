@@ -85,7 +85,7 @@ class Monke extends Primate {
 class Apes extends Primate {
 	public static void main() {
 		Apes myApes = new Apes();
-		myMonke.say();	// memanggil method dari Primate (parent)
+		myApes.say();	// memanggil method dari Primate (parent)
 	}
 }
 ```
