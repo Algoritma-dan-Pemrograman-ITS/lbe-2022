@@ -29,7 +29,7 @@ class Monke {
 		System.out.println("hu hu ha ha");
 	}
 
-	public static void() {
+	public static void main() {
 		Monke myMonke = new Monke();
 		myMonke.say();
 	}
@@ -45,7 +45,7 @@ class Apes {
 		System.out.println("hu hu ha ha");
 	}
 
-	public static void() {
+	public static void main() {
 		Apes myApes = new Apes();
 		myApes.say();
 	}
@@ -74,7 +74,7 @@ class Primate {
 
 class Monke extends Primate {
 	float tail_length;
-	public static void() {
+	public static void main() {
 		Monke myMonke = new Monke();
 		myMonke.say(); // memanggil method dari Primate (parent)
 	}
@@ -83,7 +83,7 @@ class Monke extends Primate {
 // ********
 
 class Apes extends Primate {
-	public static void() {
+	public static void main() {
 		Apes myApes = new Apes();
 		myMonke.say();	// memanggil method dari Primate (parent)
 	}
