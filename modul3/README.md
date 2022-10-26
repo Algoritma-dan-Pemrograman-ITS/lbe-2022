@@ -81,7 +81,7 @@ Contoh :
 
 ```java
 class Apes extends Primate {
-	@Overriding
+	@Override
 	public void say() {
 		System.out.println("hihi haha");
 	}
