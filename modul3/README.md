@@ -1,3 +1,21 @@
+# Modul 3 LBE Alpro 2022
+
+- [Inheritance](#inheritance)
+	- [Method Overriding](#method-overriding)
+- [Encapsulation](#encapsulation)
+	- [Access Modifiers](#access-modifiers)
+		- [Default](#default)
+		- [Public](#public)
+		- [Private](#private)
+		- [Protected](#protected)
+	- [Method Getter dan Setter](#method-getter-dan-setter)
+- [Polymorphism](#polymorphism)
+- [Abstraction](#abstraction)
+	- [Abstract Class dan Abstract Method](#abstract-class-dan-abstract-method)
+- [Referensi](#referensi)
+
+	
+
 # Inheritance
 
 Bayangkan, kita ingin membuat 2 object *Monke* (monyet) dan *Apes* (kera). Mereka 2 jenis yang mirip, tetapi monyet itu memiliki ekor, sedangkan kera tidak. Keduanya bisa berjalan, makan pisang, dan memiliki rambut. Kita ingin membuat implementasi kodenya, kita dapat membuat seperti ini: 
@@ -604,7 +622,7 @@ HAHA HIHI HAHA HIHI 	//child class (Apes)
 
 # Abstraction
 
-## Abstract class dan Abstract method
+## Abstract Class dan Abstract Method
 - Kita dapat menjadikan sebuah class sebagai abstract class
 - `Abstract class` adalah class terbatas yang tidak dapat digunakan untuk membuat objek (untuk mengaksesnya, harus inherit dari kelas lain).
 - `Method Class` hanya dapat digunakan dalam kelas abstrak, dan tidak memiliki body. body disediakan oleh subclass (inherit).
